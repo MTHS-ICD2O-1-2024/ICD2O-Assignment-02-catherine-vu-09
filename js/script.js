@@ -1,12 +1,18 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2020 Catherine All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Catherine Vu
+// Created on: March 23
 // This file contains the JS functions for index.html
 
 /**
- * Displays an alert with the message "Hello, World!"
+ * Calculates Length and Width of Rectangle 
  */
-function myButtonClicked() {
-  alert("Hello, World!")
-}
+ function calculateArea() {
+ }
+            let length = document.getElementById('length').value;
+            let width = document.getElementById('width').value;
+            
+            if(length && width) {
+                let area = length * width;
+                document.getElementById('result').innerText = `The area of the rectangle is: ${area}`;
+            }
