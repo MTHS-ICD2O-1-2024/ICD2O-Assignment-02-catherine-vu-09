@@ -9,11 +9,11 @@
  */
 
 function calculatePerimeter() {
-
+    
     let length = document.getElementById('length').value.trim();
     let height = document.getElementById('height').value.trim(); // Changed 'width' to 'height'
     let result = document.getElementById('result');
-    
+
     length = parseFloat(length);
     height = parseFloat(height); // Changed 'width' to 'height'
 
@@ -24,5 +24,4 @@ function calculatePerimeter() {
         result.innerText = "Please enter valid positive numbers for both length and height.";
     }
 }
-
 
