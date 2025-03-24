@@ -9,25 +9,20 @@
  */
 
 function calculatePerimeter() {
-    // Get length and width values and trim whitespace
+
     let length = document.getElementById('length').value.trim();
-    let width = document.getElementById('width').value.trim();
+    let height = document.getElementById('height').value.trim(); // Changed 'width' to 'height'
     let result = document.getElementById('result');
-
-    // Convert values to numbers
+    
     length = parseFloat(length);
-    width = parseFloat(width);
+    height = parseFloat(height); // Changed 'width' to 'height'
 
-    // Check if length and width are valid numbers
-    if (!isNaN(length) && !isNaN(width) && length > 0 && width > 0) {
-        // Calculate the perimeter of the rectangle
-        let perimeter = 2 * (length + width);
-
-        // Display the result
+    if (!isNaN(length) && !isNaN(height) && length > 0 && height > 0) {
+        let perimeter = 2 * (length + height); // Changed 'width' to 'height'
         result.innerText = `Perimeter is: ${perimeter} cm`;
     } else {
-        // If length or width is missing or invalid
-        result.innerText = "Please enter valid positive numbers for both length and width.";
+        result.innerText = "Please enter valid positive numbers for both length and height.";
     }
 }
+
 
