@@ -15,7 +15,7 @@ function calculatePerimeter() {
     let result = document.getElementById('result');
 
     // Check if length and width are provided and are valid numbers
-    if (length && width && !isNaN(length) && !isNaN(width)) {
+    if (length & width && !isNaN(length) && !isNaN(width)) {
       // Convert values to numbers
         length = parseFloat(length);
         width = parseFloat(width);
