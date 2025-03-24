@@ -29,5 +29,6 @@ function calculatePerimeter() {
       // If length or width is missing or invalid
         result.innerText = "Please enter valid numbers for both length and width.";
     }
+    
     }
 
