@@ -33,28 +33,26 @@
       <br>
       <div class="page-content">Enter the length and height in cm.</div>
 
-  <form>
-
-
+<form>
   <div class="input-group">
-  <label for="length">Length of Rectangle (cm)</label>
-    <input type="number" id="base" placeholder="Enter base">
+    <label for="length">Length of Rectangle (cm)</label>
+    <input type="number" id="length" placeholder="Enter length">
   </div>
+
   <div class="input-group">
     <label for="height">Height of Rectangle (cm)</label>
     <input type="number" id="height" placeholder="Enter height">
   </div>
-  </br>
+  <br>
 
-
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-    onclick="calculateArea()" type="button">
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button"
+    onclick="calculateArea()">
     Calculate!
     
   </button>
+
   <p id="result"></p> <!-- This is where the result will be displayed -->
-
-
+</form>
   </main>
   </div>
   </body>
