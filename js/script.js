@@ -9,19 +9,19 @@
  */
 
 function calculatePerimeter() {
+ // input
+
+    const lengthOfRectangle = parseFloat (document.getElementById('length-of-rectangle').value)
+    const heightOfRectangle = parseInt(document.getElementById('width-of-rectangle').value)
+
+  // process
+  const areaOfRectangle = lengthOfRectangle * heightOfRectangle
+  const perimeterOfRectangle = (lengthOfRectangle + heightOfRectangle) * 2
+
+  // output
+    document.getElementById('perimeter').innerHTML = 'Perimeter is: ' + perimeterOfRectangle + ' cm'
+
     
-    let length = document.getElementById('length').value.trim();
-    let height = document.getElementById('height').value.trim();
-    let result = document.getElementById('result');
-
-    length = Number(length);
-    height = Number(height);
-
-    if (isNaN(length) || isNaN(height) || length <= 0 || height <= 0) {
-        result.innerText = "Please enter valid positive numbers for both length and height.";
-    } else {
-        let perimeter = 2 * (length + height);
-        result.innerText = `Perimeter is: ${perimeter} cm`;
-    }
 }
+
 
