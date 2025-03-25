@@ -33,15 +33,17 @@
       <br>
       <div class="page-content">Enter the length and width in cm.</div>
 
-  <form>
+<div class="page-content">Enter the length and width in cm.</div>
+
+<form onsubmit="return false;"> <!-- Prevents form submission -->
   <div class="input-group">
     <label for="length">Length of Rectangle (cm)</label>
     <input type="number" id="length" placeholder="Enter length">
   </div>
 
   <div class="input-group">
-    <label for="width">Width of Rectangle (cm)</label> <!-- Changed 'height' to 'width' -->
-    <input type="number" id="width" placeholder="Enter width"> <!-- Changed 'height' to 'width' -->
+    <label for="width">Width of Rectangle (cm)</label>
+    <input type="number" id="width" placeholder="Enter width">
   </div>
   <br>
 
@@ -49,11 +51,10 @@
     onclick="calculatePerimeter()">
 
     Calculate!
-
+    
   </button>
 
-  <p id="result"></p> <!-- This is where the result will be displayed -->
-</form>
+  <p id="result"></p>
   </main>
   </div>
   </body>
