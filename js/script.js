@@ -11,17 +11,17 @@
 function calculatePerimeter() {
     
     let length = document.getElementById('length').value.trim();
-    let height = document.getElementById('height').value.trim(); // Changed 'width' to 'height'
+    let height = document.getElementById('height').value.trim();
     let result = document.getElementById('result');
 
-    length = parseFloat(length);
-    height = parseFloat(height); // Changed 'width' to 'height'
+    length = Number(length);
+    height = Number(height);
 
-    if (!isNaN(length) && !isNaN(height) && length > 0 && height > 0) {
-        let perimeter = 2 * (length + height); // Changed 'width' to 'height'
-        result.innerText = `Perimeter is: ${perimeter} cm`;
-    } else {
+    if (isNaN(length) || isNaN(height) || length <= 0 || height <= 0) {
         result.innerText = "Please enter valid positive numbers for both length and height.";
+    } else {
+        let perimeter = 2 * (length + height);
+        result.innerText = `Perimeter is: ${perimeter} cm`;
     }
 }
 
