@@ -8,20 +8,29 @@
  * Calculates Length and Width of Rectangle 
  */
 
-function calculatePerimeter() {
- // input
+function calculateArea() {
+   // Get base and height values
+    let base = document.getElementById('base').value;
+    let height = document.getElementById('height').value;
+    let result = document.getElementById('result');
 
-    const lengthOfRectangle = parseFloat (document.getElementById('length-of-rectangle').value)
-    const heightOfRectangle = parseInt(document.getElementById('width-of-rectangle').value)
+   // Check if base and height are provided and are valid numbers
+    if (base && height && !isNaN(base) && !isNaN(height)) {
+     // Convert values to numbers
+      base = parseFloat(base);
+      height = parseFloat(height);
 
-  // process
-  const areaOfRectangle = lengthOfRectangle * heightOfRectangle
-  const perimeterOfRectangle = (lengthOfRectangle + heightOfRectangle) * 2
+     // Calculate area of the triangle
+     let area = 0.5 * base * height;  // Correct formula for area of a triangle
 
-  // output
-    document.getElementById('perimeter').innerHTML = 'Perimeter is: ' + perimeterOfRectangle + ' cm'
+     // Display the result
+      result.innerText = "Area is: " + area + " cm²";
+      } else {
+     // If base or height is missing or invalid
+      result.innerText = "Please enter valid numbers for both base and height.";
+    }
+  }
 
-    
-}
+
 
 
