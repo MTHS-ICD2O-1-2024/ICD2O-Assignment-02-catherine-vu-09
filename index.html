@@ -55,27 +55,35 @@
         <br />
         <div class="page-content">Enter the length and width in cm.</div>
       <form>
-
-        <div class="input-group">
-          <label for="length">Length of Rectangle (cm)</label>
-          <input type="number" id="length" placeholder="Enter length" />
-        </div>
-
-        <div class="input-group">
-          <label for="width">Width of Rectangle (cm)</label>
-          <input type="number" id="width" placeholder="Enter width" />
-        </div>
-        <br />
-
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-
-          onclick="calculatePerimeter()" type="button"
-        >
-          Calculate!
-        </button>
+<div class="mdl-textfield mdl-js-textfield">
+  <!-- input pattern attribute -->
+  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length-of-rectangle" />
+  <!-- mdl-textfield__label -->
+  <label class="mdl-textfield__label" for="length-of-rectangle">Length of rectangle (cm)</label>
+  <!-- class "mdl-textfield__error" -->
+  <span class="mdl-textfield__error">Input is not a number.</span>
+</div>
+<br />
+<div class="mdl-textfield mdl-js-textfield">
+  <!-- input pattern attribute -->
+  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="width-of-rectangle" />
+  <!-- mdl-textfield__label -->
+  <label class="mdl-textfield__label" for="width-of-rectangle">Width of rectangle (cm)</label>
+  <!-- class "mdl-textfield__error" -->
+  <span class="mdl-textfield__error">Input is not a number.</span>
+</div>
+<br />
+<!-- Accent-colored raised button with ripple -->
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+  onclick="calculatePerimeter()" type="button">
+  Calculate
+</button>
 </form>
 <br />
-
+<div class="page-content-answer">
+  
+  <div id="perimeter"></div>
+</div>
 
       </main>
     </div>

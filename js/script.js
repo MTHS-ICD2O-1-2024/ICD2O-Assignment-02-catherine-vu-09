@@ -10,20 +10,15 @@
 
 "use strict";
 
-/**
-* This function calculates the perimeter of a rectangle.
-*/
-function calculatePerimeter() {
-let length = parseFloat(document.getElementById("length").value);
-let width = parseFloat(document.getElementById("width").value);
+function calculatePerimeter () {
+  // input
+  const lengthOfRectangle = parseInt(document.getElementById('length-of-rectangle').value)
+  const heightOfRectangle = parseInt(document.getElementById('width-of-rectangle').value)
 
-if (!isNaN(length) && !isNaN(width)) {
-let perimeter = 2 * (length + width);
+  // process
+  const areaOfRectangle = lengthOfRectangle * heightOfRectangle
+  const perimeterOfRectangle = (lengthOfRectangle + heightOfRectangle) * 2
 
-document.getElementById("Perimeter").innerHTML =
-`<p>Perimeter of the rectangle is: ${perimeter} cm</p>`;
-} else {
-document.getElementById("Perimeter").innerHTML =
-`<p>Please enter valid numbers for both length and width.</p>`;
-}
+  // output
+  document.getElementById('perimeter').innerHTML = 'Perimeter is: ' + perimeterOfRectangle + ' cm'
 }
