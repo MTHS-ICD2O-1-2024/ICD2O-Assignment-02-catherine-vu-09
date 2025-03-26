@@ -8,7 +8,7 @@
  * Calculates Length and Width of Rectangle 
  */
 
-function calculateArea() {
+function calculatePerimeter() {
    // Get base and height values
     let length = document.getElementById('length').value;
     let height = document.getElementById('height').value;
