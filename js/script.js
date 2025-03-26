@@ -10,14 +10,14 @@
 
 function calculateArea() {
    // Get base and height values
-    let base = document.getElementById('base').value;
+    let length = document.getElementById('length').value;
     let height = document.getElementById('height').value;
     let result = document.getElementById('result');
 
-   // Check if base and height are provided and are valid numbers
-    if (base && height && !isNaN(base) && !isNaN(height)) {
+   // Check if length and height are provided and are valid numbers
+    if (length && height && !isNaN(base) && !isNaN(height)) {
      // Convert values to numbers
-      base = parseFloat(base);
+      base = parseFloat(length);
       height = parseFloat(height);
 
      // Calculate area of the triangle
@@ -26,7 +26,7 @@ function calculateArea() {
      // Display the result
       result.innerText = "Area is: " + area + " cm²";
       } else {
-     // If base or height is missing or invalid
+     // If length or height is missing or invalid
       result.innerText = "Please enter valid numbers for both base and height.";
     }
   }
